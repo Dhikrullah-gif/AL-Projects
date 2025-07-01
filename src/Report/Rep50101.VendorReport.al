@@ -3,8 +3,8 @@ report 50101 "Vendor Report"
     ApplicationArea = All;
     Caption = 'Vendor Report';
     UsageCategory = ReportsAndAnalysis;
-    ExcelLayout='Vendor Report.xlsx';
-    DefaultLayout = Excel;
+    ExcelLayout = 'Vendor Report.xlsx';
+    DefaultLayout=Excel;
 
     dataset
     {
@@ -13,16 +13,16 @@ report 50101 "Vendor Report"
             column(Name; Name)
             {
             }
-            column(City; City)
-            {
-            }
             column(PartnerType; "Partner Type")
             {
             }
-            column(PurchasesLCY; "Purchases (LCY)")
+            column(Balance; Balance)
             {
             }
-            column(Balance; Balance)
+            column(City; City)
+            {
+            }
+            column(PurchasesLCY; "Purchases (LCY)")
             {
             }
         }
