@@ -5,7 +5,6 @@ report 50101 "Vendor Report"
     UsageCategory = ReportsAndAnalysis;
     ExcelLayout='Vendor Report.xlsx';
     DefaultLayout = Excel;
-    ProcessingOnly = true;
 
     dataset
     {
