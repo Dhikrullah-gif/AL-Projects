@@ -56,6 +56,22 @@ page 50101 "Actions Dems"
                 end;
             }
         }
+        area(Navigation)
+        {
+            action("Customer")
+            {
+                ApplicationArea = All;
+                Caption = 'Customer Details';
+                RunObject = page "Customer Card";
+            }
+            action("Sales")
+            {
+                ApplicationArea = All;
+                Caption = 'Sales Details';
+                RunObject = page "Sales Analysis View Card";
+            }
+               
+        }
     }
     
     var
