@@ -82,6 +82,19 @@ page 50101 "Actions Dems"
 
             }
         }
+        area(Reporting)
+        {
+            group(ItemReport)
+            {
+                Caption = 'Item Report';
+                action("Item Report")
+                {
+                    ApplicationArea = All;
+                    RunObject = report "Item Report";
+                    Image = Report2;
+                }
+            }
+        }
     }
     
     var
