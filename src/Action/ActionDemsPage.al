@@ -72,6 +72,16 @@ page 50101 "Actions Dems"
             }
                
         }
+        area(Creation)
+        {
+            action("New Customer")
+            {
+                ApplicationArea = All;
+                RunObject = page "Customer Card";
+                Image = Post;
+
+            }
+        }
     }
     
     var
