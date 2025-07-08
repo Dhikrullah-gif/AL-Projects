@@ -396,8 +396,8 @@ End Function
   <DataSets>
     <DataSet Name="DataSet_Result">
       <Fields>
-        <Field Name="Id">
-          <DataField>Id</DataField>
+        <Field Name="SystemId">
+          <DataField>SystemId</DataField>
         </Field>
         <Field Name="NoofSubstitutes">
           <DataField>NoofSubstitutes</DataField>

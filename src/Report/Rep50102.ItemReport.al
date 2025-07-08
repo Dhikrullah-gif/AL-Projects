@@ -10,7 +10,7 @@ report 50102 "Item Report"
     {
         dataitem(Item; Item)
         {
-            column(Id; Id)
+            column(SystemId; SystemId)
             {
             }
             column(NoofSubstitutes; "No. of Substitutes")
