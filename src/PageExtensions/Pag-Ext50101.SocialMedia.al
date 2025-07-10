@@ -1,4 +1,4 @@
-pageextension 50101 "Social Media" extends "Customer Card"
+pageextension 50101 CustomerCardExtension extends "Customer Card"
 {
     layout
     {
@@ -21,11 +21,64 @@ pageextension 50101 "Social Media" extends "Customer Card"
                 ApplicationArea = All;
             }
         }
+        
        
     }
     
     actions
     {
+        addfirst(processing)
+        {
+            action("Get Funtion")
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                begin
+                    if Cust.Get('1120') then
+                        Message(Text001)
+                    else
+                        Message(Text002);
+                end;
+            }
+            action("Find Funtion")
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+
+                begin
+                    Cust."No." := '10000';
+                    if Cust.Find('=') then
+                    Message(Text003, Cust."No.", Cust.Name, Cust."Address 2")
+                    else
+                    Message(Text002);
+                end;
+            }
+            action("Next Function")
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                begin
+                    count := '0';
+                    Cust."No." := '10000';
+                    if Cust.Find('-') then
+                    repeat
+                    count := count + 1;
+                    until Cust.Next = 0;
+                
+
+                    
+                end;
+            }
+        }
         // Add changes to page actions here
     }
     trigger OnOpenPage()
@@ -38,7 +91,12 @@ pageextension 50101 "Social Media" extends "Customer Card"
         Message('On Modify, the previous address is %1', xRec.Address);
     end;
     var
-        myInt: Integer;
+        Cust: Record Customer;
+
+        Text001: Label 'Record Found';
+        Text002: Label 'Record not Found';
+        Text003: Label 'Record Found: Customer Number: %1, \Customer Name: %2, and \Customer Address: %3';
+        count: Integer;
 
 }
 
